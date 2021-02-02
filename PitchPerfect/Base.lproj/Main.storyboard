@@ -11,7 +11,7 @@
         <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Record Sounds View Controller" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Record Sounds View Controller" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="avm-z6-rro"/>
-                                    <segue destination="x25-BF-if6" kind="show" id="csx-H0-p4i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +57,7 @@
                         <outlet property="recordingLabel" destination="tF9-aU-a0c" id="pIc-9L-xe3"/>
                         <outlet property="startRecordingButton" destination="6Qx-AJ-Lfc" id="tPt-qo-LAj"/>
                         <outlet property="stopRecordingButton" destination="MVu-Mv-7c9" id="AaO-cI-cXh"/>
+                        <segue destination="x25-BF-if6" kind="show" identifier="stopRecording" id="vj7-CW-HQ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
         <!--Play Sounds View Controller-->
         <scene sceneID="cZD-xp-oaT">
             <objects>
-                <viewController id="x25-BF-if6" userLabel="Play Sounds View Controller" sceneMemberID="viewController">
+                <viewController id="x25-BF-if6" userLabel="Play Sounds View Controller" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vWa-vm-H7l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
